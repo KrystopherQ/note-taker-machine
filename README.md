@@ -11,8 +11,24 @@
  * [License](#license)
             
 ## Usage 
-    Take notes and save them
-            
+    Take notes and save/delete them from any device connected to the internet. 
+    To start when directed to the page select get started on the landing page.
+
+  ![Start page](./assets/start.png)
+
+    After being redirected to the notes page. Write the title to your note followed by a description.
+
+  ![note](./assets/note.png)
+
+    To save or start a new note on the top left corner will be a floppy disk icon to save and a plus icon to create a new note.
+  
+  ![save](./assets/saveCreate.png)
+
+    To delete a note select the trash icon next to saved note on the left hand side.
+
+  ![delete](./assets/deleteNote.png)
+
+       
             
 ## License
     MIT License Copyright (c) 2022 Krystopher Quintero
