@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const path = require('path');
-const note = require('./db/db.json')
+const note = require('./db/db.json');
 
 
 app.use(express.json());
@@ -36,7 +36,7 @@ function newNote(body, noteArr) {
     body.id = noteArr[0]
     noteArr[0]++
         noteArr.push(newNotes)
-    fs.writeFile(path.join(__dirname, './db/db.json'), json.stringify(noteArr, null, 2))
+    fs.writeFile(path.join(__dirname, './db/db.json'), json.stringify(noteArr))
     return newNotes;
 }
 
@@ -45,9 +45,22 @@ app.post('/api/notes', (req, res) => {
     res.json(newNotes)
 })
 
+function byeFelicia(title, noteArr) {
+    for (var i = 0; i < noteArr.length; i++) {
+        var note = noteArr[i];
+        if (note.title === title) {
+            noteArr.splice(i, 1)
+            fs.writeFileSync(path.join(__dirname, './db/db.json'), json.stringify(noteArr))
+        }
+    }
+}
 
+app.delete('/api/notes/:title', (req, res) => {
+    byeFelicia(req.params.id, note)
+    res.json(true)
+})
 
 
 app.listen(PORT, () =>
     console.log(`App listening ${PORT} 🚀`)
-);
+)
