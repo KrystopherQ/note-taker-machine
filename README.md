@@ -2,8 +2,7 @@
 # Note Taker Machine
             
 ## Description 
-  Take notes and have them saved on a server. Access those notes from any device connected to the internet.
-       
+  Take notes and have them saved on a server. Access those notes from any device connected to the internet. You can visit the Heroku deployed app [here](https://young-depths-13855.herokuapp.com/).
 ## Table of Contents
             
  * [Usage](#usage)
